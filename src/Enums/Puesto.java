@@ -1,0 +1,5 @@
+package Enums;
+
+public enum Puesto {
+    PREDOC, POSTDOC, AYUDANTE_DOC, CONTRATADO_DOC, TITULAR, CATEDRATICO
+}

@@ -1,3 +1,10 @@
+import Economia.CuentaBancaria;
+import Enums.Puesto;
+import Enums.Sexo;
+import Identificadores.DNI;
+import Identificadores.NumeroCuentaBancaria;
+import Persona.Investigador;
+
 public class Main {
     public static void main(String[] args) {
         Investigador david = new Investigador(
