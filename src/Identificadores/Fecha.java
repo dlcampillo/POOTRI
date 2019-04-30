@@ -80,4 +80,9 @@ public class Fecha implements Verificable {
         }
     }
 
+    @Override
+    public String toString() {
+        return Integer.toString(this.dia) + "-" + Integer.toString(this.mes) + "-" + Integer.toString(this.año);
+    }
+
 }

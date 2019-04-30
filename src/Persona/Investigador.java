@@ -6,9 +6,10 @@ import Enums.Sexo;
 import Excepciones.CaracterIncorrecto;
 import Excepciones.EdadIncorrecta;
 import Excepciones.NumeroIncorrecto;
+import Excepciones.SaldoIncorrecto;
 import Identificadores.DNI;
 
-public class Investigador extends Persona {
+public class Investigador extends Persona{
     private Puesto puesto;
     private CuentaBancaria cuentaBancaria;
 
@@ -26,7 +27,7 @@ public class Investigador extends Persona {
     }
 
     @Override
-    public void verificar() throws EdadIncorrecta, NumeroIncorrecto, CaracterIncorrecto {
+    public void verificar() throws EdadIncorrecta, NumeroIncorrecto, CaracterIncorrecto, SaldoIncorrecto {
         if(this.edad < 18) {
             throw new EdadIncorrecta("Menor de edad");
         }

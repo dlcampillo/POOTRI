@@ -1,10 +1,12 @@
 package Persona;
 
+import Economia.Contrato;
 import Enums.Sexo;
 import Excepciones.CaracterIncorrecto;
 import Excepciones.EdadIncorrecta;
 import Excepciones.NumeroIncorrecto;
 import Identificadores.DNI;
+import Identificadores.Firma;
 import Instituciones.Empresa;
 import java.util.ArrayList;
 
@@ -21,5 +23,9 @@ public class Empresario extends Persona {
         }
 
         this.dni.verificar();
+    }
+
+    public void firmar(Contrato contrato) {
+        contrato.añadirFirma(new Firma(this.dni, "negro"), this.dni);
     }
 }

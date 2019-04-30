@@ -33,4 +33,13 @@ public class DNI implements Verificable {
             throw new CaracterIncorrecto("Caracter de control incorrecto");
         }
     }
+
+    public String getNumero() {
+        return this.numero;
+    }
+
+    @Override
+    public String toString() {
+        return this.numero + this.control;
+    }
 }

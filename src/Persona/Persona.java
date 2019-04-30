@@ -1,7 +1,9 @@
 package Persona;
 
+import Economia.Contrato;
 import Enums.Sexo;
 import Identificadores.DNI;
+import Identificadores.Firma;
 import Interfaces.Verificable;
 
 public class Persona implements Verificable {
@@ -56,5 +58,8 @@ public class Persona implements Verificable {
     }
 
     public void verificar() throws Exception {
+    }
+
+    public void firmar(Contrato contrato) {
     }
 }
