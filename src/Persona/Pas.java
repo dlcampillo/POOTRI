@@ -9,12 +9,12 @@ import Identificadores.Firma;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
-public class Director extends Persona {
-    public Director(String nombre, String apellidos, String email, Sexo sexo, int edad, Dni dni, String contrasena) {
+public class Pas extends Persona {
+    public Pas(String nombre, String apellidos, String email, Sexo sexo, int edad, Dni dni, String contrasena) {
         super(nombre, apellidos, email, sexo, edad, dni, contrasena);
     }
 
-    public Director() {
+    public Pas() {
 
     }
 

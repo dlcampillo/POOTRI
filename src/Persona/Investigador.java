@@ -7,14 +7,19 @@ import Excepciones.CaracterIncorrecto;
 import Excepciones.EdadIncorrecta;
 import Excepciones.NumeroIncorrecto;
 import Excepciones.SaldoIncorrecto;
-import Identificadores.DNI;
+import Identificadores.Dni;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Investigador extends Persona{
     private Puesto puesto;
     private CuentaBancaria cuentaBancaria;
+    private String[] lineas;
 
-    public Investigador(String nombre, String apellidos, String email, Sexo sexo, int edad, DNI dni, Puesto puesto, CuentaBancaria cuentaBancaria) {
-        super(nombre, apellidos, email, sexo, edad, dni);
+    public Investigador(String nombre, String apellidos, String email, Sexo sexo, int edad, Dni dni, Puesto puesto, CuentaBancaria cuentaBancaria, String contrasena, String[] lineas) {
+        super(nombre, apellidos, email, sexo, edad, dni, contrasena);
         this.puesto = puesto;
         this.cuentaBancaria = cuentaBancaria;
 
@@ -24,15 +29,48 @@ public class Investigador extends Persona{
         catch(NumeroIncorrecto ni) {
             System.out.println(ni.getMessage());
         }
+
+        this.lineas = lineas;
+    }
+
+    public Investigador() {
+
+    }
+
+    @XmlElement
+    public Puesto getPuesto() {
+        return puesto;
+    }
+
+    @XmlElement
+    public CuentaBancaria getCuentaBancaria() {
+        return cuentaBancaria;
+    }
+
+    @XmlElement
+    public String[] getLineas() {
+        return lineas;
+    }
+
+    public void setLineas(String[] lineas) {
+        this.lineas = lineas;
+    }
+
+    public void setPuesto(Puesto puesto) {
+        this.puesto = puesto;
+    }
+
+    public void setCuentaBancaria(CuentaBancaria cuentaBancaria) {
+        this.cuentaBancaria = cuentaBancaria;
     }
 
     @Override
     public void verificar() throws EdadIncorrecta, NumeroIncorrecto, CaracterIncorrecto, SaldoIncorrecto {
-        if(this.edad < 18) {
+        if(this.getEdad() < 18) {
             throw new EdadIncorrecta("Menor de edad");
         }
 
-        this.dni.verificar();
+        this.getDni().verificar();
         this.cuentaBancaria.verificar();
     }
 }

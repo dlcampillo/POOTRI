@@ -1,13 +1,23 @@
 package Identificadores;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Pago {
     private int cantidad;
     private Fecha fecha;
+
     public Pago(int cantidad, Fecha fecha) {
         this.cantidad = cantidad;
         this.fecha = fecha;
     }
 
+    public Pago() {
+
+    }
+
+    @XmlElement
     public int getCantidad() {
         return cantidad;
     }
@@ -16,6 +26,7 @@ public class Pago {
         this.cantidad = cantidad;
     }
 
+    @XmlElement
     public Fecha getFecha() {
         return fecha;
     }

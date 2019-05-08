@@ -3,17 +3,25 @@ package Identificadores;
 import Excepciones.NumeroIncorrecto;
 import Interfaces.Verificable;
 
-public class CIF implements Verificable {
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+public class Cif implements Verificable {
     private String letra;
     private String provincia;
     private String inscripcion;
     private String verificacion;
 
-    public CIF(String letra, String provincia, String inscripcion, String verificacion) {
+    public Cif(String letra, String provincia, String inscripcion, String verificacion) {
         this.letra = letra;
         this.provincia = provincia;
         this.inscripcion = inscripcion;
         this.verificacion = verificacion;
+    }
+
+    public Cif() {
+
     }
 
     public void verificar() throws NumeroIncorrecto {
@@ -22,19 +30,39 @@ public class CIF implements Verificable {
         }
     }
 
+    @XmlElement
     public String getLetra() {
         return letra;
     }
 
+    @XmlElement
     public String getProvincia() {
         return provincia;
     }
 
+    @XmlElement
     public String getInscripcion() {
         return inscripcion;
     }
 
+    @XmlElement
     public String getVerificacion() {
         return verificacion;
+    }
+
+    public void setLetra(String letra) {
+        this.letra = letra;
+    }
+
+    public void setProvincia(String provincia) {
+        this.provincia = provincia;
+    }
+
+    public void setInscripcion(String inscripcion) {
+        this.inscripcion = inscripcion;
+    }
+
+    public void setVerificacion(String verificacion) {
+        this.verificacion = verificacion;
     }
 }

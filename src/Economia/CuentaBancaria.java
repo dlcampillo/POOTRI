@@ -5,6 +5,10 @@ import Excepciones.SaldoIncorrecto;
 import Identificadores.NumeroCuentaBancaria;
 import Interfaces.Verificable;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class CuentaBancaria implements Verificable {
     NumeroCuentaBancaria numeroCuenta;
     long saldo;
@@ -14,6 +18,10 @@ public class CuentaBancaria implements Verificable {
         this.saldo = saldo;
     }
 
+    public CuentaBancaria() {
+
+    }
+
     public void verificar() throws SaldoIncorrecto, NumeroIncorrecto {
         if(this.saldo < 0) {
             throw new SaldoIncorrecto("Saldo negativo");
@@ -21,6 +29,7 @@ public class CuentaBancaria implements Verificable {
         this.numeroCuenta.verificar();
     }
 
+    @XmlElement
     public NumeroCuentaBancaria getNumeroCuenta() {
         return numeroCuenta;
     }
@@ -29,6 +38,7 @@ public class CuentaBancaria implements Verificable {
         this.numeroCuenta = numeroCuenta;
     }
 
+    @XmlElement
     public long getSaldo() {
         return saldo;
     }

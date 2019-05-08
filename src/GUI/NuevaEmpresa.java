@@ -1,21 +1,24 @@
 package GUI;
 
+import Instituciones.Empresa;
+import Interfaces.Mostrable;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class IniciarSesion extends JDialog {
+public class NuevaEmpresa extends JDialog implements Mostrable {
     private JPanel panelPrincipal;
     private JButton botonOK;
-    private JButton botonCancelar;
-    private JTextField campoTexto;
-    private JPasswordField campoContrasena;
+    private JTextField campoNombre;
+    private JTextField campoDireccion;
+    private JTextField campoLineas;
 
-    public IniciarSesion() {
+    public NuevaEmpresa() {
         setContentPane(panelPrincipal);
         setModal(true);
         setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-        setTitle("Iniciar sesion");
+        setTitle("Añadir empresa");
 
         botonOK.addActionListener(new ActionListener() {
             @Override
@@ -28,11 +31,8 @@ public class IniciarSesion extends JDialog {
         setLocationRelativeTo(null);
     }
 
-    public String[] mostrarDialog() {
-        String[] respuesta = new String[2];
+    public Empresa mostrarDialog() {
         setVisible(true);
-        respuesta[0] = campoTexto.getText();
-        respuesta[1] = new String(campoContrasena.getPassword());
-        return respuesta;
+        return new Empresa(campoNombre.getText(), campoDireccion.getText(), null, campoLineas.getText().split(","));
     }
 }

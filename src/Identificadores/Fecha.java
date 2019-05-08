@@ -2,44 +2,62 @@ package Identificadores;
 
 import Excepciones.FechaIncorrecta;
 import Interfaces.Verificable;
+import com.sun.xml.internal.txw2.annotation.XmlElement;
 
+@XmlElement
 public class Fecha implements Verificable {
     private int dia;
     private int mes;
-    private int año;
+    private int anyo;
 
-    public Fecha(int dia, int mes, int año) {
+    public Fecha(int dia, int mes, int anyo) {
         this.dia = dia;
         this.mes = mes;
-        this.año = año;
+        this.anyo = anyo;
+    }
+    
+    public Fecha(String[] fecha) {
+        this.dia = Integer.parseInt(fecha[0]);
+        this.mes = Integer.parseInt(fecha[1]);
+        this.anyo = Integer.parseInt(fecha[2]);
     }
 
+    public Fecha() {
+
+    }
+
+    @XmlElement
     public int getDia() {
         return dia;
     }
 
+    @XmlElement
     public void setDia(int dia) {
         this.dia = dia;
     }
 
+    @XmlElement
     public int getMes() {
         return mes;
     }
 
+    @XmlElement
     public void setMes(int mes) {
         this.mes = mes;
     }
 
+    @XmlElement
     public int getAño() {
-        return año;
+        return anyo;
     }
 
-    public void setAño(int año) {
-        this.año = año;
+    @XmlElement
+    public void setAño(int anyo) {
+        this.anyo = anyo;
     }
 
     public boolean posterior(Fecha fecha) {
-        if(fecha.getAño() < this.año) {
+        if(fecha.getAño() < this.anyo) {
             return true;
         }
         else if(fecha.getMes() < this.mes) {
@@ -82,7 +100,7 @@ public class Fecha implements Verificable {
 
     @Override
     public String toString() {
-        return Integer.toString(this.dia) + "-" + Integer.toString(this.mes) + "-" + Integer.toString(this.año);
+        return Integer.toString(this.dia) + "-" + Integer.toString(this.mes) + "-" + Integer.toString(this.anyo);
     }
 
 }

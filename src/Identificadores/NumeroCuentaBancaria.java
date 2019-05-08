@@ -4,6 +4,10 @@ import Excepciones.NumeroIncorrecto;
 import Interfaces.Verificable;
 import Utilidades.Utilidades;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class NumeroCuentaBancaria implements Verificable {
     private String entidad;
     private String oficina;
@@ -14,6 +18,46 @@ public class NumeroCuentaBancaria implements Verificable {
         this.entidad = entidad;
         this.oficina = oficina;
         this.control = control;
+        this.cuenta = cuenta;
+    }
+
+    public NumeroCuentaBancaria() {
+
+    }
+
+    @XmlElement
+    public String getEntidad() {
+        return entidad;
+    }
+
+    @XmlElement
+    public String getOficina() {
+        return oficina;
+    }
+
+    @XmlElement
+    public String getControl() {
+        return control;
+    }
+
+    @XmlElement
+    public String getCuenta() {
+        return cuenta;
+    }
+
+    public void setEntidad(String entidad) {
+        this.entidad = entidad;
+    }
+
+    public void setOficina(String oficina) {
+        this.oficina = oficina;
+    }
+
+    public void setControl(String control) {
+        this.control = control;
+    }
+
+    public void setCuenta(String cuenta) {
         this.cuenta = cuenta;
     }
 
