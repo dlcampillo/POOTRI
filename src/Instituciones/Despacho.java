@@ -11,13 +11,13 @@ public class Despacho {
     private int planta;
     private int superficie;
     private int ventanas;
-    private ArrayList<Persona> ocupantes;
+    private ArrayList<Persona> personal;
 
-    public Despacho(int planta, int superficie, int ventanas, ArrayList<Persona> ocupantes) {
+    public Despacho(int planta, int superficie, int ventanas) {
         this.planta = planta;
         this.superficie = superficie;
         this.ventanas = ventanas;
-        this.ocupantes = ocupantes;
+        this.personal = new ArrayList<Persona>();
     }
 
     public Despacho() {
@@ -40,8 +40,8 @@ public class Despacho {
     }
 
     @XmlElement
-    public ArrayList<Persona> getOcupantes() {
-        return ocupantes;
+    public ArrayList<Persona> getPersonal() {
+        return personal;
     }
 
     public void setPlanta(int planta) {
@@ -56,7 +56,15 @@ public class Despacho {
         this.ventanas = ventanas;
     }
 
-    public void setOcupantes(ArrayList<Persona> ocupantes) {
-        this.ocupantes = ocupantes;
+    public void setPersonal(ArrayList<Persona> personal) {
+        this.personal = personal;
+    }
+
+    public void addPersonal(Persona persona) {
+        this.personal.add(persona);
+    }
+
+    public String toString() {
+        return "Planta: " + planta + " (" + superficie + " m2)";
     }
 }

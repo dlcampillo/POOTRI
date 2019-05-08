@@ -21,6 +21,7 @@ public class CesarPersonal extends JDialog implements Mostrable {
         setContentPane(panelPrincipal);
         setModal(true);
         setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+        setTitle("Cesar personal");
 
         lm = new DefaultListModel<Pas>();
 

@@ -8,4 +8,8 @@ public class Utilidades {
         }
         return contador;
     }
+
+    public final static double PHI = 1.61803398874988;
+
+    public final static double PI = 3.14159265358979;
 }

@@ -72,7 +72,12 @@ public class GrupoInvestigacion {
         this.fechaCreacion = fechaCreacion;
     }
 
-    public void anadirInvestigador(Investigador investigador) {
+    public void addInvestigador(Investigador investigador) {
         investigadores.add(investigador);
+    }
+
+    @Override
+    public String toString() {
+        return nombre;
     }
 }

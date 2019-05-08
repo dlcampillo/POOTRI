@@ -2,7 +2,9 @@ package GUI;
 
 import Economia.Contrato;
 import Identificadores.Dni;
+import Instituciones.Despacho;
 import Instituciones.GrupoInvestigacion;
+import Instituciones.Oficina;
 import OTRI.Otri;
 import Persona.Director;
 import Persona.Empresario;
@@ -23,7 +25,7 @@ public class VentanaPrincipal {
     private JPanel panelPrincipal;
     private JButton crearContratoBoton;
     private JButton actualizarContratoBoton;
-    private JButton prorrogarContratoBoton;
+    private JButton nuevoDespachoBoton;
     private JButton consultarSuperficieBoton;
     private JButton consultarContratosBoton;
     private JButton consultarPresupuestosBoton;
@@ -31,8 +33,6 @@ public class VentanaPrincipal {
     private JButton consultarEmpresariosBoton;
     private JButton compararAsociadosBoton;
     private JButton resumenGlobalBoton;
-    private JButton iniciarSesionBoton;
-    private JButton cerrarSesionBoton;
     private JLabel usuarioLabel;
     private JButton nombrarDirectorBoton;
     private JButton cesarDirectorBoton;
@@ -42,10 +42,9 @@ public class VentanaPrincipal {
     private JButton bajaInvestigadorBoton;
     private JButton altaEmpresarioBoton;
     private JButton bajaEmpresarioBoton;
-    private JButton guardarBoton;
     private JButton salirBoton;
     private JButton crearGrupoInvestigacion;
-    private JButton cancelarGrupoInvestigacion;
+    private JButton validarContrato;
 
     private Otri pootri;
     private Dni usuario;
@@ -74,6 +73,12 @@ public class VentanaPrincipal {
         }
         if(pootri.getGruposInvestigacion() == null) {
             pootri.setGruposInvestigacion(new ArrayList<GrupoInvestigacion>());
+        }
+
+        if(pootri.getOficina().getDespachos() == null) {
+            Oficina ofi = pootri.getOficina();
+            ofi.setDespachos(new ArrayList<Despacho>());
+            pootri.setOficina(ofi);
         }
 
         boolean sesionIniciada = false;
@@ -141,8 +146,9 @@ public class VentanaPrincipal {
             public void actionPerformed(ActionEvent e) {
                 if(pootri.getDirector() == null) {
                     try {
-                        Director director = new NombrarDirector().mostrarDialog();
+                        Director director = new NombrarDirector(pootri.getOficina().getDespachos()).mostrarDialog();
                         pootri.setDirector(director);
+                        pootri.nuevoTrabajador();
                     } catch (Exception ex) {
                         JOptionPane.showMessageDialog(null, "Ha introducido datos incorrectos", "Error", JOptionPane.ERROR_MESSAGE);
                     }
@@ -159,6 +165,7 @@ public class VentanaPrincipal {
                 int resultado = JOptionPane.showConfirmDialog(null, "Desea cesar al director?", "Confirmar cese", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
                 if(resultado == 0) {
                     pootri.setDirector(null);
+                    pootri.despedirTrabajador();
                 }
             }
         });
@@ -167,9 +174,10 @@ public class VentanaPrincipal {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    Pas pas = new ContratarPersonal().mostrarDialog();
+                    Pas pas = new ContratarPersonal(pootri.getOficina().getDespachos()).mostrarDialog();
                     System.out.println(pas.getNombre());
                     pootri.addPas(pas);
+                    pootri.nuevoTrabajador();
                 }
                 catch (Exception ex) {
                     JOptionPane.showMessageDialog(null, "Ha introducido datos incorrectos", "Error", JOptionPane.ERROR_MESSAGE);
@@ -181,6 +189,7 @@ public class VentanaPrincipal {
             @Override
             public void actionPerformed(ActionEvent e) {
                 pootri.setPas(new CesarPersonal(pootri.getPas()).mostrarDialog());
+                pootri.despedirTrabajador();
             }
         });
 
@@ -221,10 +230,19 @@ public class VentanaPrincipal {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    pootri.addInvestigador(new AltaInvestigador().mostrarDialog());
+                    Object[] resultado = new AltaInvestigador(pootri.getGruposInvestigacion()).mostrarDialog();
+                    pootri.addInvestigador((Investigador) resultado[0]);
+                    ArrayList<GrupoInvestigacion> gis = pootri.getGruposInvestigacion();
+                    GrupoInvestigacion gi = (GrupoInvestigacion) resultado[1];
+                    gis.remove(gi);
+                    gi.addInvestigador((Investigador) resultado[0]);
+                    gis.add(gi);
+                    pootri.setGruposInvestigacion(gis);
+                    pootri.nuevoTrabajador();
                 }
                 catch (Exception ex) {
                     JOptionPane.showMessageDialog(null, "Ha introducido datos incorrectos", "Error", JOptionPane.ERROR_MESSAGE);
+                    ex.printStackTrace();
                 }
             }
         });
@@ -233,6 +251,7 @@ public class VentanaPrincipal {
             @Override
             public void actionPerformed(ActionEvent e) {
                 pootri.setInvestigadores(new BajaInvestigador(pootri.getInvestigadores()).mostrarDialog());
+                pootri.despedirTrabajador();
             }
         });
 
@@ -247,12 +266,46 @@ public class VentanaPrincipal {
                 }
             }
         });
+
+        bajaEmpresarioBoton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pootri.setEmpresarios(new BajaEmpresario(pootri.getEmpresarios()).mostrarDialog());
+            }
+        });
+
+        nuevoDespachoBoton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    Oficina ofi = pootri.getOficina();
+                    ofi.addDespacho(new NuevoDespacho().mostrarDialog());
+                    pootri.setOficina(ofi);
+                }
+                catch (Exception ex) {
+                    JOptionPane.showMessageDialog(null, "Ha introducido datos incorrectos", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        });
+
+        consultarSuperficieBoton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int superficie = 0;
+
+                for(Despacho d: pootri.getOficina().getDespachos()) {
+                    superficie += d.getSuperficie();
+                }
+
+                JOptionPane.showMessageDialog(null, "La superficie de la OTRI es de: " + superficie + " m2", "Superficie", JOptionPane.INFORMATION_MESSAGE);
+            }
+        });
     }
 
     public static void main(String[] args) {
         VentanaPrincipal ventana = new VentanaPrincipal();
 
-        JFrame frame = new JFrame("Otri Manager");
+        JFrame frame = new JFrame("OTRI Manager");
         frame.setContentPane(ventana.panelPrincipal);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();

@@ -2,12 +2,14 @@ package GUI;
 
 import Enums.Sexo;
 import Identificadores.Dni;
+import Instituciones.Despacho;
 import Interfaces.Mostrable;
 import Persona.Director;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class NombrarDirector extends JDialog implements Mostrable {
     private JPanel panelPrincipal;
@@ -19,12 +21,21 @@ public class NombrarDirector extends JDialog implements Mostrable {
     private JPasswordField campoContrasena;
     private JComboBox campoSexo;
     private JTextField campoDNI;
+    private Despacho despacho;
 
-    public NombrarDirector() {
+    public NombrarDirector(ArrayList<Despacho> despachos) {
         setContentPane(panelPrincipal);
         setModal(true);
         setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
         setTitle("Nombrar director");
+
+        despacho = despachos.get(0);
+
+        for(Despacho d: despachos) {
+            if(d.getPlanta() > despacho.getPlanta() && d.getVentanas() > despacho.getVentanas() && d.getSuperficie() > despacho.getSuperficie()) {
+                despacho = d;
+            }
+        }
 
         botonOK.addActionListener(new ActionListener() {
             @Override
@@ -42,6 +53,6 @@ public class NombrarDirector extends JDialog implements Mostrable {
 
         return new Director(campoNombre.getText(), campoApellidos.getText(), campoEmail.getText(),
                 Sexo.values()[campoSexo.getSelectedIndex()], Integer.parseInt(campoEdad.getText()), new Dni(campoDNI.getText().substring(0, 8),
-                Character.toString(campoDNI.getText().charAt(8))), new String(campoContrasena.getPassword()));
+                Character.toString(campoDNI.getText().charAt(8))), new String(campoContrasena.getPassword()), despacho);
     }
 }

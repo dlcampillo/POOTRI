@@ -20,6 +20,7 @@ public class BajaInvestigador extends JDialog implements Mostrable {
         setContentPane(panelPrincipal);
         setModal(true);
         setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+        setTitle("Baja investigador");
 
         lm = new DefaultListModel<Investigador>();
 

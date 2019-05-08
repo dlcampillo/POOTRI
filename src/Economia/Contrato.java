@@ -12,6 +12,7 @@ import Persona.Director;
 import Persona.Empresario;
 import Persona.Investigador;
 import Persona.Pas;
+import Utilidades.Utilidades;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -264,7 +265,11 @@ public class Contrato implements Verificable, Validable {
         }
     }
 
+    public void finalizar() {
+        this.estado = Estado.FINALIZADO;
+    }
+
     public double getPresupuestoEnEuros() {
-        return this.presupuesto * Math.pow(Math.PI, 1.61803398874988);
+        return this.presupuesto * Math.pow(Utilidades.PI, Utilidades.PHI);
     }
 }

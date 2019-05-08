@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Institucion {
     private String nombre;
     private String direccion;
-    private Oficina oficina;
+    protected Oficina oficina;
 
     public Institucion(String nombre, String direccion, Oficina oficina) {
         this.nombre = nombre;

@@ -5,12 +5,14 @@ import Enums.Puesto;
 import Enums.Sexo;
 import Identificadores.Dni;
 import Identificadores.NumeroCuentaBancaria;
+import Instituciones.GrupoInvestigacion;
 import Interfaces.Mostrable;
 import Persona.Investigador;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class AltaInvestigador extends JDialog implements Mostrable {
     private JPanel panelPrincipal;
@@ -29,11 +31,24 @@ public class AltaInvestigador extends JDialog implements Mostrable {
     private JTextField cuenta;
     private JTextField campoSaldo;
     private JTextField campoLineas;
+    private JComboBox grupoCombo;
+    private DefaultComboBoxModel<GrupoInvestigacion> cbm;
+    private ArrayList<GrupoInvestigacion> grupoInvestigacion;
 
-    public AltaInvestigador() {
+    public AltaInvestigador(ArrayList<GrupoInvestigacion> gi) {
         setContentPane(panelPrincipal);
         setModal(true);
         setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+
+        grupoInvestigacion = gi;
+
+        cbm = new DefaultComboBoxModel<GrupoInvestigacion>();
+
+        for(GrupoInvestigacion g: gi) {
+            cbm.addElement(g);
+        }
+
+        grupoCombo.setModel(cbm);
 
         botonOK.addActionListener(new ActionListener() {
             @Override
@@ -47,14 +62,19 @@ public class AltaInvestigador extends JDialog implements Mostrable {
         setTitle("Dar de alta investigador");
     }
 
-    public Investigador mostrarDialog() {
+    public Object[] mostrarDialog() {
         setVisible(true);
 
-        return new Investigador(campoNombre.getText(), campoApellidos.getText(), campoEmail.getText(),
+        Object[] resultado = {
+                new Investigador(campoNombre.getText(), campoApellidos.getText(), campoEmail.getText(),
                 Sexo.values()[campoSexo.getSelectedIndex()], Integer.parseInt(campoEdad.getText()),
                 new Dni(campoDNI.getText().substring(0, 8), Character.toString(campoDNI.getText().charAt(8))),
                 Puesto.values()[campoPuesto.getSelectedIndex()], new CuentaBancaria(new NumeroCuentaBancaria(entidad.getText(),
                 oficina.getText(), control.getText(), cuenta.getText()), Integer.parseInt(campoSaldo.getText())),
-                new String(campoContrasena.getPassword()), campoLineas.getText().split(","));
+                new String(campoContrasena.getPassword()), campoLineas.getText().split(",")),
+                grupoInvestigacion.get(grupoCombo.getSelectedIndex())
+        };
+
+        return resultado;
     }
 }

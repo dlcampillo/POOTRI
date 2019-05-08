@@ -151,7 +151,7 @@
               </grid>
             </constraints>
             <properties>
-              <text value="Contratar personal"/>
+              <text value="Contratar PAS"/>
             </properties>
           </component>
           <component id="c66c8" class="javax.swing.JButton" binding="cesarPersonalBoton">
@@ -162,7 +162,7 @@
               </grid>
             </constraints>
             <properties>
-              <text value="Cesar personal"/>
+              <text value="Cesar PAS"/>
             </properties>
           </component>
           <component id="253a4" class="javax.swing.JButton" binding="altaInvestigadorBoton">
@@ -239,23 +239,12 @@
               </grid>
             </constraints>
             <properties>
-              <text value="Actualizar contrato"/>
-            </properties>
-          </component>
-          <component id="5a41b" class="javax.swing.JButton" binding="prorrogarContratoBoton">
-            <constraints>
-              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="-1" height="35"/>
-                <maximum-size width="-1" height="35"/>
-              </grid>
-            </constraints>
-            <properties>
               <text value="Prorrogar contrato"/>
             </properties>
           </component>
           <component id="86c2c" class="javax.swing.JButton" binding="crearGrupoInvestigacion">
             <constraints>
-              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
                 <preferred-size width="-1" height="35"/>
                 <maximum-size width="-1" height="35"/>
               </grid>
@@ -264,15 +253,26 @@
               <text value="Crear grupo investigacion"/>
             </properties>
           </component>
-          <component id="3e688" class="javax.swing.JButton" binding="cancelarGrupoInvestigacion">
+          <component id="5a41b" class="javax.swing.JButton" binding="nuevoDespachoBoton">
             <constraints>
-              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
                 <preferred-size width="-1" height="35"/>
                 <maximum-size width="-1" height="35"/>
               </grid>
             </constraints>
             <properties>
-              <text value="Añadir investigador a grupo"/>
+              <text value="Añadir despacho"/>
+            </properties>
+          </component>
+          <component id="c5fb4" class="javax.swing.JButton" binding="validarContrato">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="-1" height="35"/>
+                <maximum-size width="-1" height="35"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value="Validar contrato"/>
             </properties>
           </component>
         </children>

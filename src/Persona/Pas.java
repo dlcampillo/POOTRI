@@ -5,13 +5,14 @@ import Enums.Sexo;
 import Identificadores.Dni;
 import Identificadores.Fecha;
 import Identificadores.Firma;
+import Instituciones.Despacho;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
-public class Pas extends Persona {
-    public Pas(String nombre, String apellidos, String email, Sexo sexo, int edad, Dni dni, String contrasena) {
-        super(nombre, apellidos, email, sexo, edad, dni, contrasena);
+public class Pas extends PersonalOtri {
+    public Pas(String nombre, String apellidos, String email, Sexo sexo, int edad, Dni dni, String contrasena, Despacho despacho) {
+        super(nombre, apellidos, email, sexo, edad, dni, contrasena, despacho);
     }
 
     public Pas() {

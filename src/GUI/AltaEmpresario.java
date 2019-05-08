@@ -44,15 +44,20 @@ public class AltaEmpresario extends JDialog implements Mostrable {
         nuevaEmpresaBoton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                empresas.add(new NuevaEmpresa().mostrarDialog());
+                try {
+                    empresas.add(new NuevaEmpresa().mostrarDialog());
 
-                model = new DefaultListModel<Empresa>();
+                    model = new DefaultListModel<Empresa>();
 
-                for(Empresa emp: empresas) {
-                    model.addElement(emp);
+                    for (Empresa emp : empresas) {
+                        model.addElement(emp);
+                    }
+
+                    lista.setModel(model);
                 }
-
-                lista.setModel(model);
+                catch (Exception ex) {
+                    JOptionPane.showMessageDialog(null, "Ha introducido datos incorrectos", "Error", JOptionPane.ERROR_MESSAGE);
+                }
             }
         });
 

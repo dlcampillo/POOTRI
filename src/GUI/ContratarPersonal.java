@@ -2,11 +2,13 @@ package GUI;
 
 import Enums.Sexo;
 import Identificadores.Dni;
+import Instituciones.Despacho;
 import Persona.Pas;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class ContratarPersonal extends JDialog {
     private JPanel panelPrincipal;
@@ -18,12 +20,24 @@ public class ContratarPersonal extends JDialog {
     private JComboBox campoSexo;
     private JTextField campoDNI;
     private JButton botonOK;
+    private JComboBox despachoCombo;
+    private ArrayList<Despacho> despachos;
+    private DefaultComboBoxModel<Despacho> cbm;
 
-    public ContratarPersonal() {
+    public ContratarPersonal(ArrayList<Despacho> despachos) {
         setContentPane(panelPrincipal);
         setModal(true);
         setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
         setTitle("Contratar personal");
+
+        this.despachos = despachos;
+        cbm = new DefaultComboBoxModel<Despacho>();
+
+        for(Despacho d: this.despachos) {
+            cbm.addElement(d);
+        }
+
+        despachoCombo.setModel(cbm);
 
         botonOK.addActionListener(new ActionListener() {
             @Override
@@ -50,6 +64,6 @@ public class ContratarPersonal extends JDialog {
 
         return new Pas(campoNombre.getText(), campoApellidos.getText(), campoEmail.getText(),
                 sexo, Integer.parseInt(campoEdad.getText()), new Dni(campoDNI.getText().substring(0, 8),
-                Character.toString(campoDNI.getText().charAt(8))), new String(campoContrasena.getPassword()));
+                Character.toString(campoDNI.getText().charAt(8))), new String(campoContrasena.getPassword()), despachos.get(despachoCombo.getSelectedIndex()));
     }
 }

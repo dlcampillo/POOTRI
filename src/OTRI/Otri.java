@@ -21,6 +21,7 @@ public class Otri extends Institucion {
     private ArrayList<Empresario> empresarios;
     private ArrayList<Contrato> contratos;
     private ArrayList<GrupoInvestigacion> gruposInvestigacion;
+    private int contador;
 
     public Otri(String nombre, String direccion, Oficina oficina, Director director, ArrayList<Pas> pas, ArrayList<Investigador> investigadores, ArrayList<Empresario> empresarios, ArrayList<Contrato> contratos, ArrayList<GrupoInvestigacion> gruposInvestigacion) {
         super(nombre, direccion, oficina);
@@ -30,6 +31,7 @@ public class Otri extends Institucion {
         this.empresarios = empresarios;
         this.contratos = contratos;
         this.gruposInvestigacion = gruposInvestigacion;
+        this.contador = 0;
     }
 
     public Otri() {
@@ -66,6 +68,11 @@ public class Otri extends Institucion {
         return gruposInvestigacion;
     }
 
+    @XmlElement
+    public int getContador() {
+        return contador;
+    }
+
     public void setDirector(Director director) {
         this.director = director;
     }
@@ -86,6 +93,10 @@ public class Otri extends Institucion {
         this.contratos = contratos;
     }
 
+    public void setContador(int contador) {
+        this.contador = contador;
+    }
+
     public void addPas(Pas pas) {
         this.pas.add(pas);
     }
@@ -104,5 +115,13 @@ public class Otri extends Institucion {
 
     public void setGruposInvestigacion(ArrayList<GrupoInvestigacion> gruposInvestigacion) {
         this.gruposInvestigacion = gruposInvestigacion;
+    }
+
+    public void nuevoTrabajador() {
+        this.oficina.setTrabajadores(this.oficina.getTrabajadores() + 1);
+    }
+
+    public void despedirTrabajador() {
+        this.oficina.setTrabajadores(this.oficina.getTrabajadores() - 1);
     }
 }

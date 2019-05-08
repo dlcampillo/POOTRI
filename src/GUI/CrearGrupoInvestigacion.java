@@ -48,7 +48,10 @@ public class CrearGrupoInvestigacion extends JDialog implements Mostrable {
 
     public GrupoInvestigacion mostrarDialog() {
         setVisible(true);
+        ArrayList<Investigador> invs = new ArrayList<Investigador>();
+        invs.add(investigadores.get(campoIP.getSelectedIndex()));
+
         return new GrupoInvestigacion(campoNombre.getText(), campoLineas.getText().split(","), investigadores.get(campoIP.getSelectedIndex()),
-                new ArrayList<Investigador>(), new Fecha(campoFecha.getText().split("/")));
+                invs, new Fecha(campoFecha.getText().split("/")));
     }
 }
