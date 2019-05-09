@@ -22,4 +22,9 @@ public class Director extends PersonalOtri {
     public void firmar(Contrato contrato, Fecha fecha) {
         contrato.añadirFirma(new Firma(this.getDni(), fecha), this.getDni());
     }
+
+    @Override
+    public String toString() {
+        return getNombre() + " " + getApellidos() + " [Director] " + " (" + getDni().toString() + ")";
+    }
 }

@@ -47,27 +47,25 @@ public class Fecha implements Verificable {
     }
 
     @XmlElement
-    public int getAño() {
+    public int getAnyo() {
         return anyo;
     }
 
     @XmlElement
-    public void setAño(int anyo) {
+    public void setAnyo(int anyo) {
         this.anyo = anyo;
     }
 
-    public boolean posterior(Fecha fecha) {
-        if(fecha.getAño() < this.anyo) {
+    public boolean posterior(Fecha f) {
+        if(f.getAnyo() < this.anyo) {
             return true;
+
         }
-        else if(fecha.getMes() < this.mes) {
-            return true;
-        }
-        else if(fecha.getDia() < this.dia) {
+        else if(f.getMes() < this.mes) {
             return true;
         }
         else {
-            return false;
+            return f.getDia() < this.dia;
         }
     }
 
@@ -100,7 +98,7 @@ public class Fecha implements Verificable {
 
     @Override
     public String toString() {
-        return Integer.toString(this.dia) + "-" + Integer.toString(this.mes) + "-" + Integer.toString(this.anyo);
+        return this.dia + "/" + this.mes + "/" + this.anyo;
     }
 
 }

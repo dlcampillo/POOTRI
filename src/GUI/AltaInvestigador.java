@@ -68,7 +68,7 @@ public class AltaInvestigador extends JDialog implements Mostrable {
         Object[] resultado = {
                 new Investigador(campoNombre.getText(), campoApellidos.getText(), campoEmail.getText(),
                 Sexo.values()[campoSexo.getSelectedIndex()], Integer.parseInt(campoEdad.getText()),
-                new Dni(campoDNI.getText().substring(0, 8), Character.toString(campoDNI.getText().charAt(8))),
+                new Dni(campoDNI.getText()),
                 Puesto.values()[campoPuesto.getSelectedIndex()], new CuentaBancaria(new NumeroCuentaBancaria(entidad.getText(),
                 oficina.getText(), control.getText(), cuenta.getText()), Integer.parseInt(campoSaldo.getText())),
                 new String(campoContrasena.getPassword()), campoLineas.getText().split(",")),

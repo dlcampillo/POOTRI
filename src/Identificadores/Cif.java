@@ -65,4 +65,8 @@ public class Cif implements Verificable {
     public void setVerificacion(String verificacion) {
         this.verificacion = verificacion;
     }
+
+    public String toString() {
+        return letra + "-" + provincia + "-" + inscripcion + "-" + verificacion;
+    }
 }

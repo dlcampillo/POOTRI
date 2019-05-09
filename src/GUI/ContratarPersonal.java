@@ -63,7 +63,6 @@ public class ContratarPersonal extends JDialog {
         }
 
         return new Pas(campoNombre.getText(), campoApellidos.getText(), campoEmail.getText(),
-                sexo, Integer.parseInt(campoEdad.getText()), new Dni(campoDNI.getText().substring(0, 8),
-                Character.toString(campoDNI.getText().charAt(8))), new String(campoContrasena.getPassword()), despachos.get(despachoCombo.getSelectedIndex()));
+                sexo, Integer.parseInt(campoEdad.getText()), new Dni(campoDNI.getText()), new String(campoContrasena.getPassword()), despachos.get(despachoCombo.getSelectedIndex()));
     }
 }

@@ -24,7 +24,6 @@ import java.util.ArrayList;
 public class VentanaPrincipal {
     private JPanel panelPrincipal;
     private JButton crearContratoBoton;
-    private JButton actualizarContratoBoton;
     private JButton nuevoDespachoBoton;
     private JButton consultarSuperficieBoton;
     private JButton consultarContratosBoton;
@@ -45,6 +44,7 @@ public class VentanaPrincipal {
     private JButton salirBoton;
     private JButton crearGrupoInvestigacion;
     private JButton validarContrato;
+    private JButton prorrogarContrato;
 
     private Otri pootri;
     private Dni usuario;
@@ -90,8 +90,7 @@ public class VentanaPrincipal {
                 for (Investigador investigador : pootri.getInvestigadores()) {
                     if (investigador.getDni().equals(new Dni(credenciales[0].substring(0, 8), Character.toString(credenciales[0].charAt(8))))
                             && investigador.getContrasena().equals(credenciales[1])) {
-                        usuarioLabel.setText(investigador.getNombre() + " " + investigador.getApellidos() +
-                                " [Investigador] " + " (" + investigador.getDni().toString() + ")");
+                        usuarioLabel.setText(investigador.toString());
                         usuario = investigador.getDni();
                         sesionIniciada = true;
                     }
@@ -104,8 +103,7 @@ public class VentanaPrincipal {
                 for (Pas pas : pootri.getPas()) {
                     if (pas.getDni().equals(new Dni(credenciales[0].substring(0, 8), Character.toString(credenciales[0].charAt(8))))
                             && pas.getContrasena().equals(credenciales[1])) {
-                        usuarioLabel.setText(pas.getNombre() + " " + pas.getApellidos() +
-                                " [PAS] " + " (" + pas.getDni().toString() + ")");
+                        usuarioLabel.setText(pas.toString());
                         usuario = pas.getDni();
                         sesionIniciada = true;
                     }
@@ -118,8 +116,7 @@ public class VentanaPrincipal {
                 for (Empresario empresario : pootri.getEmpresarios()) {
                     if (empresario.getDni().equals(new Dni(credenciales[0].substring(0, 8), Character.toString(credenciales[0].charAt(8))))
                             && empresario.getContrasena().equals(credenciales[1])) {
-                        usuarioLabel.setText(empresario.getNombre() + " " + empresario.getApellidos() +
-                                " [Empresario] " + " (" + empresario.getDni().toString() + ")");
+                        usuarioLabel.setText(empresario.toString());
                         usuario = empresario.getDni();
                         sesionIniciada = true;
                     }
@@ -131,8 +128,7 @@ public class VentanaPrincipal {
             try {
                 if (pootri.getDirector().getDni().equals(new Dni(credenciales[0].substring(0, 8), Character.toString(credenciales[0].charAt(8))))
                         && pootri.getDirector().getContrasena().equals(credenciales[1])) {
-                    usuarioLabel.setText(pootri.getDirector().getNombre() + " " + pootri.getDirector().getApellidos() +
-                            " [Director] " + " (" + pootri.getDirector().getDni().toString() + ")");
+                    usuarioLabel.setText(pootri.getDirector().toString());
                     usuario = pootri.getDirector().getDni();
                     sesionIniciada = true;
                 }
@@ -242,7 +238,6 @@ public class VentanaPrincipal {
                 }
                 catch (Exception ex) {
                     JOptionPane.showMessageDialog(null, "Ha introducido datos incorrectos", "Error", JOptionPane.ERROR_MESSAGE);
-                    ex.printStackTrace();
                 }
             }
         });
@@ -298,6 +293,93 @@ public class VentanaPrincipal {
                 }
 
                 JOptionPane.showMessageDialog(null, "La superficie de la OTRI es de: " + superficie + " m2", "Superficie", JOptionPane.INFORMATION_MESSAGE);
+            }
+        });
+
+        consultarInvestigadoresBoton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new ConsultarInvestigadores(pootri.getInvestigadores());
+            }
+        });
+
+        consultarEmpresariosBoton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new ConsultarEmpresarios(pootri.getEmpresarios());
+            }
+        });
+
+        compararAsociadosBoton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new CompararAsociados(pootri);
+            }
+        });
+
+        crearContratoBoton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    Pas pas = null;
+
+                    for (Pas p : pootri.getPas()) {
+                        if (p.getDni().equals(usuario)) {
+                            pas = p;
+                        }
+                    }
+
+                    if(pas == null) {
+                        JOptionPane.showMessageDialog(null, "Solo el PAS puede crear contratos", "Error", JOptionPane.ERROR_MESSAGE);
+                    }
+                    else {
+                        pootri.addContrato(new NuevoContrato(pootri, pas).mostrarDialog());
+                        pootri.setContador(pootri.getContador()+1);
+                    }
+                }
+                catch(Exception ex) {
+                    JOptionPane.showMessageDialog(null, "Ha introducido datos incorrectos", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        });
+
+        prorrogarContrato.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(usuario.equals(pootri.getDirector().getDni())) {
+                    pootri.setContratos(new SeleccionarContrato(pootri.getContratos()).mostrarDialog());
+                }
+                else {
+                    JOptionPane.showMessageDialog(null, "Solo el director puede prorrogar contratos", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        });
+
+        consultarContratosBoton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new ConsultarContrato(pootri.getContratos());
+            }
+        });
+
+        consultarPresupuestosBoton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new ConsultarPresupuestos(pootri.getContratos());
+            }
+        });
+
+        resumenGlobalBoton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new Resumen(pootri);
+            }
+        });
+
+        validarContrato.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pootri.setContratos(new SeleccionarValidarContrato(pootri.getContratos()).mostrarDialog());
             }
         });
     }

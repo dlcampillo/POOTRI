@@ -28,4 +28,9 @@ public class PersonalOtri extends Persona {
     public void setDespacho(Despacho despacho) {
         this.despacho = despacho;
     }
+
+    @Override
+    public String toString() {
+        return new String();
+    }
 }

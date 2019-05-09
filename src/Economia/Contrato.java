@@ -34,10 +34,12 @@ public class Contrato implements Verificable, Validable {
     private double presupuesto;
     private Director director;
     private Pas creador;
+    private int anyoCreacion;
 
 
     public Contrato(ArrayList<Investigador> investigadores, ArrayList<Empresario> empresarios, String titulo, Fecha fechaInicio,
-                    Fecha fechaFin, ArrayList<Pago> pagos, TipoContrato tipo, CodigoContrato codigo, long presupuesto, Director director, Pas creador) {
+                    Fecha fechaFin, ArrayList<Pago> pagos, TipoContrato tipo, CodigoContrato codigo, long presupuesto,
+                    Director director, Pas creador, int anyoCreacion) {
         this.investigadores = investigadores;
         this.empresarios = empresarios;
         this.titulo = titulo;
@@ -51,7 +53,7 @@ public class Contrato implements Verificable, Validable {
         this.firmas = new ArrayList<Firma>();
         this.director = director;
         this.creador = creador;
-
+        this.anyoCreacion = anyoCreacion;
     }
 
 
@@ -129,6 +131,11 @@ public class Contrato implements Verificable, Validable {
         return creador;
     }
 
+    @XmlElement
+    public int getAnyoCreacion() {
+        return anyoCreacion;
+    }
+
     public void setInvestigadores(ArrayList<Investigador> investigadores) {
         this.investigadores = investigadores;
     }
@@ -183,6 +190,10 @@ public class Contrato implements Verificable, Validable {
 
     public void setCreador(Pas creador) {
         this.creador = creador;
+    }
+
+    public void setAnyoCreacion(int anyoCreacion) {
+        this.anyoCreacion = anyoCreacion;
     }
 
     public void añadirFirma(Firma firma, Dni dni) {
@@ -271,5 +282,10 @@ public class Contrato implements Verificable, Validable {
 
     public double getPresupuestoEnEuros() {
         return this.presupuesto * Math.pow(Utilidades.PI, Utilidades.PHI);
+    }
+
+    @Override
+    public String toString() {
+        return titulo + " (" + codigo.toString() + ")";
     }
 }

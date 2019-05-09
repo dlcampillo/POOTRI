@@ -35,4 +35,9 @@ public class Pago {
         this.fecha = fecha;
     }
 
+    @Override
+    public String toString() {
+        return fecha + ": " + cantidad + " estateros";
+    }
+
 }

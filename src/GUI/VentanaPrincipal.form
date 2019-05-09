@@ -231,7 +231,7 @@
               <text value="Crear contrato"/>
             </properties>
           </component>
-          <component id="3d46b" class="javax.swing.JButton" binding="actualizarContratoBoton">
+          <component id="3d46b" class="javax.swing.JButton" binding="prorrogarContrato">
             <constraints>
               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
                 <preferred-size width="-1" height="35"/>

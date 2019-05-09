@@ -52,7 +52,6 @@ public class NombrarDirector extends JDialog implements Mostrable {
         setVisible(true);
 
         return new Director(campoNombre.getText(), campoApellidos.getText(), campoEmail.getText(),
-                Sexo.values()[campoSexo.getSelectedIndex()], Integer.parseInt(campoEdad.getText()), new Dni(campoDNI.getText().substring(0, 8),
-                Character.toString(campoDNI.getText().charAt(8))), new String(campoContrasena.getPassword()), despacho);
+                Sexo.values()[campoSexo.getSelectedIndex()], Integer.parseInt(campoEdad.getText()), new Dni(campoDNI.getText()), new String(campoContrasena.getPassword()), despacho);
     }
 }

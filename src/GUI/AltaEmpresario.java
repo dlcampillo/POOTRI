@@ -75,7 +75,7 @@ public class AltaEmpresario extends JDialog implements Mostrable {
     public Empresario mostrarDialog() {
         setVisible(true);
         return new Empresario(campoNombre.getText(), campoApellidos.getText(), campoEmail.getText(), Sexo.values()[campoSexo.getSelectedIndex()],
-                Integer.parseInt(campoEdad.getText()), new Dni(campoDNI.getText().substring(0, 8), Character.toString(campoDNI.getText().charAt(8))),
+                Integer.parseInt(campoEdad.getText()), new Dni(campoDNI.getText()),
                 new CuentaBancaria(new NumeroCuentaBancaria(entidad.getText(), oficina.getText(), control.getText(), cuenta.getText()),
                         Integer.parseInt(campoSaldo.getText())), empresas, new String(campoContrasena.getPassword()));
     }

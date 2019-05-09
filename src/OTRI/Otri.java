@@ -113,6 +113,10 @@ public class Otri extends Institucion {
         empresarios.add(empresario);
     }
 
+    public void addContrato(Contrato contrato) {
+        contratos.add(contrato);
+    }
+
     public void setGruposInvestigacion(ArrayList<GrupoInvestigacion> gruposInvestigacion) {
         this.gruposInvestigacion = gruposInvestigacion;
     }

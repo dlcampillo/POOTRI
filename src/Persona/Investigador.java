@@ -73,4 +73,9 @@ public class Investigador extends Persona{
         this.getDni().verificar();
         this.cuentaBancaria.verificar();
     }
+
+    @Override
+    public String toString() {
+        return getNombre() + " " + getApellidos() + " [Investigador] " + " (" + getDni().toString() + ")";
+    }
 }

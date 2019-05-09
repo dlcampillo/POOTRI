@@ -13,7 +13,7 @@ public class Firma {
     String firma;
 
     public Firma(Dni dni, Fecha fecha) {
-        this.firma = Integer.toString(Utilidades.sumaDigitos(dni.getNumero())) + "/" + fecha.toString();
+        this.firma = Utilidades.sumaDigitos(dni.getNumero()) + "/" + fecha.toString();
         this.tipo = TipoFirma.DIGITAL;
     }
 

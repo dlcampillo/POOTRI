@@ -19,6 +19,11 @@ public class Dni implements Verificable {
         this.control = control;
     }
 
+    public Dni(String codigo) {
+        this.numero = codigo.substring(0,8);
+        this.control = Character.toString(codigo.charAt(8));
+    }
+
     public Dni() {
 
     }
@@ -70,11 +75,6 @@ public class Dni implements Verificable {
     }
 
     public boolean equals(Dni dni) {
-        if(numero.equals(dni.getNumero()) && control.equals(dni.getControl())) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return numero.equals(dni.getNumero()) && control.equals(dni.getControl());
     }
 }

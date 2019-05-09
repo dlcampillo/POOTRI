@@ -47,4 +47,11 @@ public class CodigoContrato {
     public void setContador(int contador) {
         this.contador = contador;
     }
+
+    @Override
+    public String toString() {
+        String[] tipos = {"INV", "ASE", "APT", "SER", "FOR"};
+        String tipoStr = tipos[tipo.ordinal()];
+        return tipoStr + "-" + año + "-" + contador;
+    }
 }

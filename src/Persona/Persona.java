@@ -108,7 +108,5 @@ public abstract class Persona implements Verificable {
     }
 
     @Override
-    public String toString() {
-        return nombre + " " + apellidos + " (" + dni.toString() + ")";
-    }
+    public abstract String toString();
 }
