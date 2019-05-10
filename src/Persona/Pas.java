@@ -20,7 +20,7 @@ public class Pas extends PersonalOtri {
     }
 
     public void firmar(Contrato contrato, Fecha fecha) {
-        contrato.añadirFirma(new Firma(this.getDni(), fecha), this.getDni());
+        contrato.addFirma(new Firma(this.getDni(), fecha), this.getDni());
     }
 
     @Override

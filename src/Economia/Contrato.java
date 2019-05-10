@@ -51,6 +51,7 @@ public class Contrato implements Verificable, Validable {
         this.codigo = codigo;
         this.presupuesto = presupuesto;
         this.firmas = new ArrayList<Firma>();
+        this.listaFirmantes = new ArrayList<Dni>();
         this.director = director;
         this.creador = creador;
         this.anyoCreacion = anyoCreacion;
@@ -196,7 +197,7 @@ public class Contrato implements Verificable, Validable {
         this.anyoCreacion = anyoCreacion;
     }
 
-    public void añadirFirma(Firma firma, Dni dni) {
+    public void addFirma(Firma firma, Dni dni) {
         firmas.add(firma);
         listaFirmantes.add(dni);
     }
@@ -215,7 +216,7 @@ public class Contrato implements Verificable, Validable {
             suma += pago.getCantidad();
 
             if(pago.getFecha().posterior(this.fechaFin) || this.fechaInicio.posterior(pago.getFecha())) {
-                throw new FechaIncorrecta("Fecha de pago no encuadrada entre inicio y fin");
+                throw new FechaIncorrecta("Fecha de pago no encuadrada entre inicio y fin: " + pago.getFecha());
             }
         }
 
@@ -241,13 +242,12 @@ public class Contrato implements Verificable, Validable {
             try {
                 this.verificar();
             } catch (Exception e) {
-                System.out.println(e.getMessage());
+
             }
 
             this.estado = Estado.FIRMA;
         }
-
-        if(this.estado == Estado.FIRMA) {
+        else if(this.estado == Estado.FIRMA) {
             boolean firmado = true;
 
             for(Investigador investigador: investigadores) {

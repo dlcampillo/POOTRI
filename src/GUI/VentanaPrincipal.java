@@ -379,7 +379,7 @@ public class VentanaPrincipal {
         validarContrato.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                pootri.setContratos(new SeleccionarValidarContrato(pootri.getContratos()).mostrarDialog());
+                pootri.setContratos(new SeleccionarValidarContrato(pootri.getContratos(), usuario).mostrarDialog());
             }
         });
     }

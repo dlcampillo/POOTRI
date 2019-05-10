@@ -34,10 +34,13 @@ public class ConsultarPresupuestos extends JDialog {
                 int cuentaAnyo = 0;
 
                 for(Contrato c: contratos) {
-                    if(!campoTotal.equals("")) {
+                    if(!campoTotal.getText().equals("")) {
                         if(Integer.parseInt(campoTotal.getText()) == c.getAnyoCreacion()) {
                             total += c.getPresupuesto();
                         }
+                    }
+                    else {
+                        total += c.getPresupuesto();
                     }
 
                     if(c.getTipo() == TipoContrato.values()[comboMedio.getSelectedIndex()]) {
@@ -45,11 +48,15 @@ public class ConsultarPresupuestos extends JDialog {
                         cuentaTipo++;
                     }
 
-                    if(!campoMedio.equals("")) {
+                    if(!campoMedio.getText().equals("")) {
                         if(Integer.parseInt(campoMedio.getText()) == c.getAnyoCreacion()) {
                             mediaAnyo += c.getPresupuesto();
                             cuentaAnyo++;
                         }
+                    }
+                    else {
+                        mediaAnyo += c.getPresupuesto();
+                        cuentaAnyo++;
                     }
                 }
 

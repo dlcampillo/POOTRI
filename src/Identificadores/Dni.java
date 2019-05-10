@@ -3,6 +3,7 @@ package Identificadores;
 import Excepciones.CaracterIncorrecto;
 import Excepciones.NumeroIncorrecto;
 import Interfaces.Verificable;
+import Utilidades.Utilidades;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -11,8 +12,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Dni implements Verificable {
     private String numero;
     private String control;
-    private String[] asignacionLetra = {"T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z",
-            "S", "Q", "V", "H", "L", "C", "K", "E"};
 
     public Dni(String numero, String control){
         this.numero = numero;
@@ -42,7 +41,7 @@ public class Dni implements Verificable {
             throw new NumeroIncorrecto("Longitud de Dni incorrecta");
         }
 
-        if(!asignacionLetra[resto].equals(this.control)) {
+        if(!Utilidades.asignacionLetra[resto].equals(this.control)) {
             throw new CaracterIncorrecto("Caracter de control incorrecto");
         }
     }
@@ -63,10 +62,6 @@ public class Dni implements Verificable {
 
     public void setControl(String control) {
         this.control = control;
-    }
-
-    public void setAsignacionLetra(String[] asignacionLetra) {
-        this.asignacionLetra = asignacionLetra;
     }
 
     @Override

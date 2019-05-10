@@ -46,7 +46,7 @@ public class Empresario extends Persona {
     }
 
     public void firmar(Contrato contrato) {
-        contrato.añadirFirma(new Firma(this.getDni(), "negro"), this.getDni());
+        contrato.addFirma(new Firma(this.getDni(), "negro"), this.getDni());
     }
 
     @Override

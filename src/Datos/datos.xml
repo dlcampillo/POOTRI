@@ -22,139 +22,9 @@
     </oficina>
     <contador>7</contador>
     <contratos>
-        <anyoCreacion>1999</anyoCreacion>
-        <codigo>
-            <anyo>1999</anyo>
-            <contador>0</contador>
-            <tipo>INV</tipo>
-        </codigo>
-        <creador>
-            <apellidos>Espallardo</apellidos>
-            <contrasena>12345</contrasena>
-            <dni>
-                <control>K</control>
-                <numero>48143920</numero>
-            </dni>
-            <edad>67</edad>
-            <email>raul@uvpa.es</email>
-            <nombre>Raul</nombre>
-            <sexo>MASCULINO</sexo>
-            <despacho>
-                <planta>2</planta>
-                <superficie>340</superficie>
-                <ventanas>6</ventanas>
-            </despacho>
-        </creador>
-        <director>
-            <apellidos>Lozano</apellidos>
-            <contrasena>12345</contrasena>
-            <dni>
-                <control>Y</control>
-                <numero>48839241</numero>
-            </dni>
-            <edad>18</edad>
-            <email>daiv@uvpa.es</email>
-            <nombre>David</nombre>
-            <sexo>MASCULINO</sexo>
-            <despacho>
-                <planta>5</planta>
-                <superficie>500</superficie>
-                <ventanas>10</ventanas>
-            </despacho>
-        </director>
-        <empresarios>
-            <apellidos>Mora</apellidos>
-            <contrasena>12345</contrasena>
-            <dni>
-                <control>F</control>
-                <numero>74772432</numero>
-            </dni>
-            <edad>43</edad>
-            <email>mari@uvpa.es</email>
-            <nombre>Maria</nombre>
-            <sexo>MASCULINO</sexo>
-            <empresas>
-                <direccion>Calle Ruy Perez, s/n</direccion>
-                <nombre>Electronicas Mora</nombre>
-                <oficina>
-                    <despachos>
-                        <planta>1</planta>
-                        <superficie>34</superficie>
-                        <ventanas>3</ventanas>
-                    </despachos>
-                    <despachos>
-                        <planta>2</planta>
-                        <superficie>43</superficie>
-                        <ventanas>4</ventanas>
-                    </despachos>
-                    <despachos>
-                        <planta>3</planta>
-                        <superficie>54</superficie>
-                        <ventanas>5</ventanas>
-                    </despachos>
-                    <trabajadores>45</trabajadores>
-                </oficina>
-                <cif>
-                    <inscripcion>12345</inscripcion>
-                    <letra>A</letra>
-                    <provincia>12</provincia>
-                    <verificacion>J</verificacion>
-                </cif>
-                <lineas>Electronica</lineas>
-                <lineas>Componentes</lineas>
-            </empresas>
-        </empresarios>
-        <estado>NEGOCIACION</estado>
-        <fechaFin>
-            <anyo>2020</anyo>
-            <dia>2</dia>
-            <mes>2</mes>
-        </fechaFin>
-        <fechaInicio>
-            <anyo>2000</anyo>
-            <dia>1</dia>
-            <mes>1</mes>
-        </fechaInicio>
-        <investigadores>
-            <apellidos>Lopez</apellidos>
-            <contrasena>12345</contrasena>
-            <dni>
-                <control>B</control>
-                <numero>15439405</numero>
-            </dni>
-            <edad>23</edad>
-            <email>jose@uvpa.es</email>
-            <nombre>Jose</nombre>
-            <sexo>MASCULINO</sexo>
-            <cuentaBancaria>
-                <numeroCuenta>
-                    <control>65</control>
-                    <cuenta>1234567890</cuenta>
-                    <entidad>1234</entidad>
-                    <oficina>1234</oficina>
-                </numeroCuenta>
-                <saldo>10000</saldo>
-            </cuentaBancaria>
-            <lineas>Matematicas</lineas>
-            <lineas>Fisica</lineas>
-            <puesto>PREDOC</puesto>
-        </investigadores>
-        <pagos>
-            <cantidad>10000</cantidad>
-            <fecha>
-                <anyo>2020</anyo>
-                <dia>1</dia>
-                <mes>2</mes>
-            </fecha>
-        </pagos>
-        <presupuesto>10000.0</presupuesto>
-        <tipo>INV</tipo>
-        <titulo>Contrato numero 1</titulo>
-    </contratos>
-    <contratos>
         <anyoCreacion>2000</anyoCreacion>
         <codigo>
-            <anyo>2000</anyo>
+            <año>0</año>
             <contador>1</contador>
             <tipo>ASE</tipo>
         </codigo>
@@ -234,7 +104,7 @@
                 <lineas>Circuitos</lineas>
             </empresas>
         </empresarios>
-        <estado>NEGOCIACION</estado>
+        <estado>EN_CURSO</estado>
         <fechaFin>
             <anyo>2017</anyo>
             <dia>4</dia>
@@ -290,169 +160,9 @@
         <titulo>Contrato numero 2</titulo>
     </contratos>
     <contratos>
-        <anyoCreacion>2009</anyoCreacion>
-        <codigo>
-            <anyo>2009</anyo>
-            <contador>2</contador>
-            <tipo>APT</tipo>
-        </codigo>
-        <creador>
-            <apellidos>Espallardo</apellidos>
-            <contrasena>12345</contrasena>
-            <dni>
-                <control>K</control>
-                <numero>48143920</numero>
-            </dni>
-            <edad>67</edad>
-            <email>raul@uvpa.es</email>
-            <nombre>Raul</nombre>
-            <sexo>MASCULINO</sexo>
-            <despacho>
-                <planta>2</planta>
-                <superficie>340</superficie>
-                <ventanas>6</ventanas>
-            </despacho>
-        </creador>
-        <director>
-            <apellidos>Lozano</apellidos>
-            <contrasena>12345</contrasena>
-            <dni>
-                <control>Y</control>
-                <numero>48839241</numero>
-            </dni>
-            <edad>18</edad>
-            <email>daiv@uvpa.es</email>
-            <nombre>David</nombre>
-            <sexo>MASCULINO</sexo>
-            <despacho>
-                <planta>5</planta>
-                <superficie>500</superficie>
-                <ventanas>10</ventanas>
-            </despacho>
-        </director>
-        <empresarios>
-            <apellidos>Sanchez</apellidos>
-            <contrasena>12345</contrasena>
-            <dni>
-                <control>V</control>
-                <numero>23822750</numero>
-            </dni>
-            <edad>67</edad>
-            <email>rosu@uvpa.es</email>
-            <nombre>Rosualdo</nombre>
-            <sexo>MASCULINO</sexo>
-            <empresas>
-                <direccion>Campo de Cartagena, 7</direccion>
-                <nombre>Hortifruticolas Sanchez</nombre>
-                <oficina>
-                    <despachos>
-                        <planta>1</planta>
-                        <superficie>200</superficie>
-                        <ventanas>6</ventanas>
-                    </despachos>
-                    <trabajadores>34</trabajadores>
-                </oficina>
-                <cif>
-                    <inscripcion>84923</inscripcion>
-                    <letra>D</letra>
-                    <provincia>65</provincia>
-                    <verificacion>E</verificacion>
-                </cif>
-                <lineas>Agricultura</lineas>
-                <lineas>Fertilizantes</lineas>
-            </empresas>
-            <empresas>
-                <direccion>Campo de Cartagena, 9</direccion>
-                <nombre>Distribuidoras Sanchez</nombre>
-                <oficina>
-                    <despachos>
-                        <planta>1</planta>
-                        <superficie>400</superficie>
-                        <ventanas>8</ventanas>
-                    </despachos>
-                    <despachos>
-                        <planta>2</planta>
-                        <superficie>250</superficie>
-                        <ventanas>4</ventanas>
-                    </despachos>
-                    <trabajadores>12</trabajadores>
-                </oficina>
-                <cif>
-                    <inscripcion>12834</inscripcion>
-                    <letra>W</letra>
-                    <provincia>12</provincia>
-                    <verificacion>F</verificacion>
-                </cif>
-                <lineas>Transporte</lineas>
-            </empresas>
-        </empresarios>
-        <estado>NEGOCIACION</estado>
-        <fechaFin>
-            <anyo>2017</anyo>
-            <dia>23</dia>
-            <mes>6</mes>
-        </fechaFin>
-        <fechaInicio>
-            <anyo>2015</anyo>
-            <dia>5</dia>
-            <mes>8</mes>
-        </fechaInicio>
-        <investigadores>
-            <apellidos>Garcia Legaz</apellidos>
-            <contrasena>12345</contrasena>
-            <dni>
-                <control>Z</control>
-                <numero>02226989</numero>
-            </dni>
-            <edad>19</edad>
-            <email>alvari@uvpa.es</email>
-            <nombre>Alvaro</nombre>
-            <sexo>MASCULINO</sexo>
-            <cuentaBancaria>
-                <numeroCuenta>
-                    <control>65</control>
-                    <cuenta>1243658709</cuenta>
-                    <entidad>1243</entidad>
-                    <oficina>1243</oficina>
-                </numeroCuenta>
-                <saldo>10000</saldo>
-            </cuentaBancaria>
-            <lineas>Computacion</lineas>
-            <lineas>Redes</lineas>
-            <puesto>CATEDRATICO</puesto>
-        </investigadores>
-        <pagos>
-            <cantidad>10000</cantidad>
-            <fecha>
-                <anyo>2015</anyo>
-                <dia>15</dia>
-                <mes>9</mes>
-            </fecha>
-        </pagos>
-        <pagos>
-            <cantidad>2500</cantidad>
-            <fecha>
-                <anyo>2016</anyo>
-                <dia>16</dia>
-                <mes>9</mes>
-            </fecha>
-        </pagos>
-        <pagos>
-            <cantidad>2500</cantidad>
-            <fecha>
-                <anyo>2016</anyo>
-                <dia>17</dia>
-                <mes>10</mes>
-            </fecha>
-        </pagos>
-        <presupuesto>15000.0</presupuesto>
-        <tipo>APT</tipo>
-        <titulo>Contrato numero 3</titulo>
-    </contratos>
-    <contratos>
         <anyoCreacion>2003</anyoCreacion>
         <codigo>
-            <anyo>2003</anyo>
+            <año>0</año>
             <contador>3</contador>
             <tipo>SER</tipo>
         </codigo>
@@ -622,139 +332,9 @@
         <titulo>Contrato numero 4</titulo>
     </contratos>
     <contratos>
-        <anyoCreacion>1980</anyoCreacion>
-        <codigo>
-            <anyo>1980</anyo>
-            <contador>4</contador>
-            <tipo>FOR</tipo>
-        </codigo>
-        <creador>
-            <apellidos>Espallardo</apellidos>
-            <contrasena>12345</contrasena>
-            <dni>
-                <control>K</control>
-                <numero>48143920</numero>
-            </dni>
-            <edad>67</edad>
-            <email>raul@uvpa.es</email>
-            <nombre>Raul</nombre>
-            <sexo>MASCULINO</sexo>
-            <despacho>
-                <planta>2</planta>
-                <superficie>340</superficie>
-                <ventanas>6</ventanas>
-            </despacho>
-        </creador>
-        <director>
-            <apellidos>Lozano</apellidos>
-            <contrasena>12345</contrasena>
-            <dni>
-                <control>Y</control>
-                <numero>48839241</numero>
-            </dni>
-            <edad>18</edad>
-            <email>daiv@uvpa.es</email>
-            <nombre>David</nombre>
-            <sexo>MASCULINO</sexo>
-            <despacho>
-                <planta>5</planta>
-                <superficie>500</superficie>
-                <ventanas>10</ventanas>
-            </despacho>
-        </director>
-        <empresarios>
-            <apellidos>Ribera</apellidos>
-            <contrasena>12345</contrasena>
-            <dni>
-                <control>M</control>
-                <numero>61788907</numero>
-            </dni>
-            <edad>56</edad>
-            <email>alber@uvpa.es</email>
-            <nombre>Alberto</nombre>
-            <sexo>MASCULINO</sexo>
-            <empresas>
-                <direccion>Paseo Plutonio, s/n</direccion>
-                <nombre>ID Nanofisica</nombre>
-                <oficina>
-                    <despachos>
-                        <planta>1</planta>
-                        <superficie>100</superficie>
-                        <ventanas>5</ventanas>
-                    </despachos>
-                    <despachos>
-                        <planta>2</planta>
-                        <superficie>150</superficie>
-                        <ventanas>6</ventanas>
-                    </despachos>
-                    <despachos>
-                        <planta>3</planta>
-                        <superficie>40</superficie>
-                        <ventanas>2</ventanas>
-                    </despachos>
-                    <trabajadores>20</trabajadores>
-                </oficina>
-                <cif>
-                    <inscripcion>54321</inscripcion>
-                    <letra>B</letra>
-                    <provincia>34</provincia>
-                    <verificacion>0</verificacion>
-                </cif>
-                <lineas>Nanofisica</lineas>
-                <lineas>Circuitos</lineas>
-            </empresas>
-        </empresarios>
-        <estado>NEGOCIACION</estado>
-        <fechaFin>
-            <anyo>2006</anyo>
-            <dia>6</dia>
-            <mes>6</mes>
-        </fechaFin>
-        <fechaInicio>
-            <anyo>2005</anyo>
-            <dia>5</dia>
-            <mes>5</mes>
-        </fechaInicio>
-        <investigadores>
-            <apellidos>Fernandez</apellidos>
-            <contrasena>12345</contrasena>
-            <dni>
-                <control>D</control>
-                <numero>68379469</numero>
-            </dni>
-            <edad>45</edad>
-            <email>juan@uvpa.es</email>
-            <nombre>Juan</nombre>
-            <sexo>MASCULINO</sexo>
-            <cuentaBancaria>
-                <numeroCuenta>
-                    <control>1423</control>
-                    <cuenta>1243567980</cuenta>
-                    <entidad>1243</entidad>
-                    <oficina>1234</oficina>
-                </numeroCuenta>
-                <saldo>10000</saldo>
-            </cuentaBancaria>
-            <lineas>Topologia</lineas>
-            <lineas>Astrofisica</lineas>
-            <puesto>TITULAR</puesto>
-        </investigadores>
-        <pagos>
-            <cantidad>3000</cantidad>
-            <fecha>
-                <anyo>2006</anyo>
-                <dia>30</dia>
-                <mes>3</mes>
-            </fecha>
-        </pagos>
-        <presupuesto>3000.0</presupuesto>
-        <tipo>FOR</tipo>
-        <titulo>Contrato numero 5</titulo>
-    </contratos>
-    <contratos>
         <anyoCreacion>2000</anyoCreacion>
         <codigo>
-            <anyo>2000</anyo>
+            <año>0</año>
             <contador>5</contador>
             <tipo>APT</tipo>
         </codigo>
@@ -980,9 +560,438 @@
         <titulo>Contrato numero 6</titulo>
     </contratos>
     <contratos>
+        <anyoCreacion>1999</anyoCreacion>
+        <codigo>
+            <año>0</año>
+            <contador>0</contador>
+            <tipo>INV</tipo>
+        </codigo>
+        <creador>
+            <apellidos>Espallardo</apellidos>
+            <contrasena>12345</contrasena>
+            <dni>
+                <control>K</control>
+                <numero>48143920</numero>
+            </dni>
+            <edad>67</edad>
+            <email>raul@uvpa.es</email>
+            <nombre>Raul</nombre>
+            <sexo>MASCULINO</sexo>
+            <despacho>
+                <planta>2</planta>
+                <superficie>340</superficie>
+                <ventanas>6</ventanas>
+            </despacho>
+        </creador>
+        <director>
+            <apellidos>Lozano</apellidos>
+            <contrasena>12345</contrasena>
+            <dni>
+                <control>Y</control>
+                <numero>48839241</numero>
+            </dni>
+            <edad>18</edad>
+            <email>daiv@uvpa.es</email>
+            <nombre>David</nombre>
+            <sexo>MASCULINO</sexo>
+            <despacho>
+                <planta>5</planta>
+                <superficie>500</superficie>
+                <ventanas>10</ventanas>
+            </despacho>
+        </director>
+        <empresarios>
+            <apellidos>Mora</apellidos>
+            <contrasena>12345</contrasena>
+            <dni>
+                <control>F</control>
+                <numero>74772432</numero>
+            </dni>
+            <edad>43</edad>
+            <email>mari@uvpa.es</email>
+            <nombre>Maria</nombre>
+            <sexo>MASCULINO</sexo>
+            <empresas>
+                <direccion>Calle Ruy Perez, s/n</direccion>
+                <nombre>Electronicas Mora</nombre>
+                <oficina>
+                    <despachos>
+                        <planta>1</planta>
+                        <superficie>34</superficie>
+                        <ventanas>3</ventanas>
+                    </despachos>
+                    <despachos>
+                        <planta>2</planta>
+                        <superficie>43</superficie>
+                        <ventanas>4</ventanas>
+                    </despachos>
+                    <despachos>
+                        <planta>3</planta>
+                        <superficie>54</superficie>
+                        <ventanas>5</ventanas>
+                    </despachos>
+                    <trabajadores>45</trabajadores>
+                </oficina>
+                <cif>
+                    <inscripcion>12345</inscripcion>
+                    <letra>A</letra>
+                    <provincia>12</provincia>
+                    <verificacion>J</verificacion>
+                </cif>
+                <lineas>Electronica</lineas>
+                <lineas>Componentes</lineas>
+            </empresas>
+        </empresarios>
+        <estado>FIRMA</estado>
+        <fechaFin>
+            <anyo>2020</anyo>
+            <dia>2</dia>
+            <mes>2</mes>
+        </fechaFin>
+        <fechaInicio>
+            <anyo>2000</anyo>
+            <dia>1</dia>
+            <mes>1</mes>
+        </fechaInicio>
+        <investigadores>
+            <apellidos>Lopez</apellidos>
+            <contrasena>12345</contrasena>
+            <dni>
+                <control>B</control>
+                <numero>15439405</numero>
+            </dni>
+            <edad>23</edad>
+            <email>jose@uvpa.es</email>
+            <nombre>Jose</nombre>
+            <sexo>MASCULINO</sexo>
+            <cuentaBancaria>
+                <numeroCuenta>
+                    <control>65</control>
+                    <cuenta>1234567890</cuenta>
+                    <entidad>1234</entidad>
+                    <oficina>1234</oficina>
+                </numeroCuenta>
+                <saldo>10000</saldo>
+            </cuentaBancaria>
+            <lineas>Matematicas</lineas>
+            <lineas>Fisica</lineas>
+            <puesto>PREDOC</puesto>
+        </investigadores>
+        <pagos>
+            <cantidad>10000</cantidad>
+            <fecha>
+                <anyo>2020</anyo>
+                <dia>1</dia>
+                <mes>2</mes>
+            </fecha>
+        </pagos>
+        <presupuesto>10000.0</presupuesto>
+        <tipo>INV</tipo>
+        <titulo>Contrato numero 1</titulo>
+    </contratos>
+    <contratos>
+        <anyoCreacion>1980</anyoCreacion>
+        <codigo>
+            <año>0</año>
+            <contador>4</contador>
+            <tipo>FOR</tipo>
+        </codigo>
+        <creador>
+            <apellidos>Espallardo</apellidos>
+            <contrasena>12345</contrasena>
+            <dni>
+                <control>K</control>
+                <numero>48143920</numero>
+            </dni>
+            <edad>67</edad>
+            <email>raul@uvpa.es</email>
+            <nombre>Raul</nombre>
+            <sexo>MASCULINO</sexo>
+            <despacho>
+                <planta>2</planta>
+                <superficie>340</superficie>
+                <ventanas>6</ventanas>
+            </despacho>
+        </creador>
+        <director>
+            <apellidos>Lozano</apellidos>
+            <contrasena>12345</contrasena>
+            <dni>
+                <control>Y</control>
+                <numero>48839241</numero>
+            </dni>
+            <edad>18</edad>
+            <email>daiv@uvpa.es</email>
+            <nombre>David</nombre>
+            <sexo>MASCULINO</sexo>
+            <despacho>
+                <planta>5</planta>
+                <superficie>500</superficie>
+                <ventanas>10</ventanas>
+            </despacho>
+        </director>
+        <empresarios>
+            <apellidos>Ribera</apellidos>
+            <contrasena>12345</contrasena>
+            <dni>
+                <control>M</control>
+                <numero>61788907</numero>
+            </dni>
+            <edad>56</edad>
+            <email>alber@uvpa.es</email>
+            <nombre>Alberto</nombre>
+            <sexo>MASCULINO</sexo>
+            <empresas>
+                <direccion>Paseo Plutonio, s/n</direccion>
+                <nombre>ID Nanofisica</nombre>
+                <oficina>
+                    <despachos>
+                        <planta>1</planta>
+                        <superficie>100</superficie>
+                        <ventanas>5</ventanas>
+                    </despachos>
+                    <despachos>
+                        <planta>2</planta>
+                        <superficie>150</superficie>
+                        <ventanas>6</ventanas>
+                    </despachos>
+                    <despachos>
+                        <planta>3</planta>
+                        <superficie>40</superficie>
+                        <ventanas>2</ventanas>
+                    </despachos>
+                    <trabajadores>20</trabajadores>
+                </oficina>
+                <cif>
+                    <inscripcion>54321</inscripcion>
+                    <letra>B</letra>
+                    <provincia>34</provincia>
+                    <verificacion>0</verificacion>
+                </cif>
+                <lineas>Nanofisica</lineas>
+                <lineas>Circuitos</lineas>
+            </empresas>
+        </empresarios>
+        <estado>FIRMA</estado>
+        <fechaFin>
+            <anyo>2006</anyo>
+            <dia>6</dia>
+            <mes>6</mes>
+        </fechaFin>
+        <fechaInicio>
+            <anyo>2005</anyo>
+            <dia>5</dia>
+            <mes>5</mes>
+        </fechaInicio>
+        <investigadores>
+            <apellidos>Fernandez</apellidos>
+            <contrasena>12345</contrasena>
+            <dni>
+                <control>D</control>
+                <numero>68379469</numero>
+            </dni>
+            <edad>45</edad>
+            <email>juan@uvpa.es</email>
+            <nombre>Juan</nombre>
+            <sexo>MASCULINO</sexo>
+            <cuentaBancaria>
+                <numeroCuenta>
+                    <control>65</control>
+                    <cuenta>1243567980</cuenta>
+                    <entidad>1243</entidad>
+                    <oficina>1234</oficina>
+                </numeroCuenta>
+                <saldo>10000</saldo>
+            </cuentaBancaria>
+            <lineas>Topologia</lineas>
+            <lineas>Astrofisica</lineas>
+            <puesto>TITULAR</puesto>
+        </investigadores>
+        <pagos>
+            <cantidad>3000</cantidad>
+            <fecha>
+                <anyo>2006</anyo>
+                <dia>30</dia>
+                <mes>3</mes>
+            </fecha>
+        </pagos>
+        <presupuesto>3000.0</presupuesto>
+        <tipo>FOR</tipo>
+        <titulo>Contrato numero 5</titulo>
+    </contratos>
+    <contratos>
+        <anyoCreacion>2009</anyoCreacion>
+        <codigo>
+            <año>0</año>
+            <contador>2</contador>
+            <tipo>APT</tipo>
+        </codigo>
+        <creador>
+            <apellidos>Espallardo</apellidos>
+            <contrasena>12345</contrasena>
+            <dni>
+                <control>K</control>
+                <numero>48143920</numero>
+            </dni>
+            <edad>67</edad>
+            <email>raul@uvpa.es</email>
+            <nombre>Raul</nombre>
+            <sexo>MASCULINO</sexo>
+            <despacho>
+                <planta>2</planta>
+                <superficie>340</superficie>
+                <ventanas>6</ventanas>
+            </despacho>
+        </creador>
+        <director>
+            <apellidos>Lozano</apellidos>
+            <contrasena>12345</contrasena>
+            <dni>
+                <control>Y</control>
+                <numero>48839241</numero>
+            </dni>
+            <edad>18</edad>
+            <email>daiv@uvpa.es</email>
+            <nombre>David</nombre>
+            <sexo>MASCULINO</sexo>
+            <despacho>
+                <planta>5</planta>
+                <superficie>500</superficie>
+                <ventanas>10</ventanas>
+            </despacho>
+        </director>
+        <empresarios>
+            <apellidos>Sanchez</apellidos>
+            <contrasena>12345</contrasena>
+            <dni>
+                <control>V</control>
+                <numero>23822750</numero>
+            </dni>
+            <edad>67</edad>
+            <email>rosu@uvpa.es</email>
+            <nombre>Rosualdo</nombre>
+            <sexo>MASCULINO</sexo>
+            <empresas>
+                <direccion>Campo de Cartagena, 7</direccion>
+                <nombre>Hortifruticolas Sanchez</nombre>
+                <oficina>
+                    <despachos>
+                        <planta>1</planta>
+                        <superficie>200</superficie>
+                        <ventanas>6</ventanas>
+                    </despachos>
+                    <trabajadores>34</trabajadores>
+                </oficina>
+                <cif>
+                    <inscripcion>84923</inscripcion>
+                    <letra>D</letra>
+                    <provincia>65</provincia>
+                    <verificacion>E</verificacion>
+                </cif>
+                <lineas>Agricultura</lineas>
+                <lineas>Fertilizantes</lineas>
+            </empresas>
+            <empresas>
+                <direccion>Campo de Cartagena, 9</direccion>
+                <nombre>Distribuidoras Sanchez</nombre>
+                <oficina>
+                    <despachos>
+                        <planta>1</planta>
+                        <superficie>400</superficie>
+                        <ventanas>8</ventanas>
+                    </despachos>
+                    <despachos>
+                        <planta>2</planta>
+                        <superficie>250</superficie>
+                        <ventanas>4</ventanas>
+                    </despachos>
+                    <trabajadores>12</trabajadores>
+                </oficina>
+                <cif>
+                    <inscripcion>12834</inscripcion>
+                    <letra>W</letra>
+                    <provincia>12</provincia>
+                    <verificacion>F</verificacion>
+                </cif>
+                <lineas>Transporte</lineas>
+            </empresas>
+        </empresarios>
+        <estado>FIRMA</estado>
+        <fechaFin>
+            <anyo>2017</anyo>
+            <dia>23</dia>
+            <mes>6</mes>
+        </fechaFin>
+        <fechaInicio>
+            <anyo>2015</anyo>
+            <dia>5</dia>
+            <mes>8</mes>
+        </fechaInicio>
+        <firmas>
+            <color>negro</color>
+            <firma>48839241Y</firma>
+            <tipo>MANUSCRITA</tipo>
+        </firmas>
+        <investigadores>
+            <apellidos>Garcia Legaz</apellidos>
+            <contrasena>12345</contrasena>
+            <dni>
+                <control>Z</control>
+                <numero>02226989</numero>
+            </dni>
+            <edad>19</edad>
+            <email>alvari@uvpa.es</email>
+            <nombre>Alvaro</nombre>
+            <sexo>MASCULINO</sexo>
+            <cuentaBancaria>
+                <numeroCuenta>
+                    <control>65</control>
+                    <cuenta>1243658709</cuenta>
+                    <entidad>1243</entidad>
+                    <oficina>1243</oficina>
+                </numeroCuenta>
+                <saldo>10000</saldo>
+            </cuentaBancaria>
+            <lineas>Computacion</lineas>
+            <lineas>Redes</lineas>
+            <puesto>CATEDRATICO</puesto>
+        </investigadores>
+        <listaFirmantes>
+            <control>Y</control>
+            <numero>48839241</numero>
+        </listaFirmantes>
+        <pagos>
+            <cantidad>10000</cantidad>
+            <fecha>
+                <anyo>2015</anyo>
+                <dia>15</dia>
+                <mes>9</mes>
+            </fecha>
+        </pagos>
+        <pagos>
+            <cantidad>2500</cantidad>
+            <fecha>
+                <anyo>2016</anyo>
+                <dia>16</dia>
+                <mes>9</mes>
+            </fecha>
+        </pagos>
+        <pagos>
+            <cantidad>2500</cantidad>
+            <fecha>
+                <anyo>2016</anyo>
+                <dia>17</dia>
+                <mes>10</mes>
+            </fecha>
+        </pagos>
+        <presupuesto>15000.0</presupuesto>
+        <tipo>APT</tipo>
+        <titulo>Contrato numero 3</titulo>
+    </contratos>
+    <contratos>
         <anyoCreacion>1997</anyoCreacion>
         <codigo>
-            <anyo>1997</anyo>
+            <año>0</año>
             <contador>6</contador>
             <tipo>APT</tipo>
         </codigo>
@@ -1160,7 +1169,7 @@
                 <lineas>Transporte</lineas>
             </empresas>
         </empresarios>
-        <estado>NEGOCIACION</estado>
+        <estado>FIRMA</estado>
         <fechaFin>
             <anyo>2010</anyo>
             <dia>10</dia>
@@ -1171,6 +1180,16 @@
             <dia>9</dia>
             <mes>9</mes>
         </fechaInicio>
+        <firmas>
+            <color>negro</color>
+            <firma>48839241Y</firma>
+            <tipo>MANUSCRITA</tipo>
+        </firmas>
+        <firmas>
+            <color>negro</color>
+            <firma>48839241Y</firma>
+            <tipo>MANUSCRITA</tipo>
+        </firmas>
         <investigadores>
             <apellidos>Lopez</apellidos>
             <contrasena>12345</contrasena>
@@ -1280,7 +1299,7 @@
             <sexo>MASCULINO</sexo>
             <cuentaBancaria>
                 <numeroCuenta>
-                    <control>1423</control>
+                    <control>65</control>
                     <cuenta>1243567980</cuenta>
                     <entidad>1243</entidad>
                     <oficina>1234</oficina>
@@ -1315,6 +1334,14 @@
             <lineas>Arrecifes</lineas>
             <puesto>AYUDANTE_DOC</puesto>
         </investigadores>
+        <listaFirmantes>
+            <control>Y</control>
+            <numero>48839241</numero>
+        </listaFirmantes>
+        <listaFirmantes>
+            <control>Y</control>
+            <numero>48839241</numero>
+        </listaFirmantes>
         <pagos>
             <cantidad>10000</cantidad>
             <fecha>
@@ -1339,7 +1366,7 @@
                 <mes>4</mes>
             </fecha>
         </pagos>
-        <presupuesto>10000.0</presupuesto>
+        <presupuesto>100000.0</presupuesto>
         <tipo>APT</tipo>
         <titulo>Contrato de unificacion OTRI</titulo>
     </contratos>
@@ -1591,7 +1618,7 @@
             <sexo>MASCULINO</sexo>
             <cuentaBancaria>
                 <numeroCuenta>
-                    <control>1423</control>
+                    <control>65</control>
                     <cuenta>1243567980</cuenta>
                     <entidad>1243</entidad>
                     <oficina>1234</oficina>
@@ -1821,7 +1848,7 @@
         <sexo>MASCULINO</sexo>
         <cuentaBancaria>
             <numeroCuenta>
-                <control>1423</control>
+                <control>65</control>
                 <cuenta>1243567980</cuenta>
                 <entidad>1243</entidad>
                 <oficina>1234</oficina>

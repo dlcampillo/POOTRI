@@ -57,16 +57,13 @@ public class Fecha implements Verificable {
     }
 
     public boolean posterior(Fecha f) {
-        if(f.getAnyo() < this.anyo) {
-            return true;
-
+        if(f.getAnyo() == anyo) {
+            if(f.getMes() == mes) {
+                return f.getDia() < dia;
+            }
+            else return f.getMes() < mes;
         }
-        else if(f.getMes() < this.mes) {
-            return true;
-        }
-        else {
-            return f.getDia() < this.dia;
-        }
+        else return f.getAnyo() < anyo;
     }
 
     public void verificar() throws FechaIncorrecta {
