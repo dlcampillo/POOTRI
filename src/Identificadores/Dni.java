@@ -8,6 +8,11 @@ import Utilidades.Utilidades;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ * @author David Lozano Campillo
+ * @version 1.0.0
+ */
+
 @XmlRootElement
 public class Dni implements Verificable {
     private String numero;

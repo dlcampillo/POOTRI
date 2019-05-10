@@ -10,6 +10,7 @@ public class IniciarSesion extends JDialog {
     private JButton botonCancelar;
     private JTextField campoTexto;
     private JPasswordField campoContrasena;
+    private JButton salir;
 
     public IniciarSesion() {
         setContentPane(panelPrincipal);
@@ -21,6 +22,13 @@ public class IniciarSesion extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
+            }
+        });
+
+        salir.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
             }
         });
 

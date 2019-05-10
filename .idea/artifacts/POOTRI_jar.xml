@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="POOTRI:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/POOTRI_jar</output-path>
+    <root id="archive" name="POOTRI.jar">
+      <element id="module-output" name="POOTRI" />
+    </root>
+  </artifact>
+</component>

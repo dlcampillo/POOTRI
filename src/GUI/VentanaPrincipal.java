@@ -53,7 +53,7 @@ public class VentanaPrincipal {
         try {
             JAXBContext context = JAXBContext.newInstance(Otri.class);
             Unmarshaller um = context.createUnmarshaller();
-            pootri = (Otri) um.unmarshal(new File("src/Datos/datos.xml"));
+            pootri = (Otri) um.unmarshal(new File("../../../data/datos.xml"));
         }
         catch (JAXBException jaxbe) {
             jaxbe.printStackTrace();
@@ -198,7 +198,7 @@ public class VentanaPrincipal {
                         JAXBContext context = JAXBContext.newInstance(Otri.class);
                         Marshaller m = context.createMarshaller();
                         m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
-                        m.marshal(pootri, new File("src/Datos/datos.xml"));
+                        m.marshal(pootri, new File("../../../data/datos.xml"));
                     } catch (JAXBException jaxbe) {
                         jaxbe.printStackTrace();
                     }

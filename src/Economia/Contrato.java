@@ -1,5 +1,7 @@
 package Economia;
 
+
+
 import Enums.Estado;
 import Enums.TipoContrato;
 import Excepciones.FechaIncorrecta;
@@ -18,6 +20,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 
+/**
+ * @author David Lozano Campillo
+ * @version 1.0.0
+ */
 @XmlRootElement
 public class Contrato implements Verificable, Validable {
     private ArrayList<Investigador> investigadores;
@@ -35,7 +41,6 @@ public class Contrato implements Verificable, Validable {
     private Director director;
     private Pas creador;
     private int anyoCreacion;
-
 
     public Contrato(ArrayList<Investigador> investigadores, ArrayList<Empresario> empresarios, String titulo, Fecha fechaInicio,
                     Fecha fechaFin, ArrayList<Pago> pagos, TipoContrato tipo, CodigoContrato codigo, long presupuesto,
@@ -136,6 +141,7 @@ public class Contrato implements Verificable, Validable {
     public int getAnyoCreacion() {
         return anyoCreacion;
     }
+
 
     public void setInvestigadores(ArrayList<Investigador> investigadores) {
         this.investigadores = investigadores;

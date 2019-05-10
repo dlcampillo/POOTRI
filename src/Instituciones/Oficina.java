@@ -6,6 +6,11 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 
+/**
+ * @author David Lozano Campillo
+ * @version 1.0.0
+ */
+
 @XmlRootElement
 public class Oficina implements EspacioTrabajo {
     private int trabajadores;

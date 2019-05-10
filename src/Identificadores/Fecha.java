@@ -4,6 +4,11 @@ import Excepciones.FechaIncorrecta;
 import Interfaces.Verificable;
 import com.sun.xml.internal.txw2.annotation.XmlElement;
 
+/**
+ * @author David Lozano Campillo
+ * @version 1.0.0
+ */
+
 @XmlElement
 public class Fecha implements Verificable {
     private int dia;

@@ -14,6 +14,11 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 
+/**
+ * @author David Lozano Campillo
+ * @version 1.0.0
+ */
+
 @XmlRootElement
 public class Empresario extends Persona {
     private ArrayList<Empresa> empresas;

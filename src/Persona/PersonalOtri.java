@@ -7,6 +7,11 @@ import Instituciones.Despacho;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ * @author David Lozano Campillo
+ * @version 1.0.0
+ */
+
 @XmlRootElement
 public class PersonalOtri extends Persona {
     private Despacho despacho;

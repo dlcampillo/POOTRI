@@ -3,6 +3,11 @@ package Identificadores;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ * @author David Lozano Campillo
+ * @version 1.0.0
+ */
+
 @XmlRootElement
 public class Pago {
     private int cantidad;

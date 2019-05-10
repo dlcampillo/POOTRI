@@ -7,6 +7,11 @@ import Interfaces.Verificable;
 
 import javax.xml.bind.annotation.XmlElement;
 
+/**
+ * @author David Lozano Campillo
+ * @version 1.0.0
+ */
+
 public abstract class Persona implements Verificable {
     private String nombre;
     private String apellidos;

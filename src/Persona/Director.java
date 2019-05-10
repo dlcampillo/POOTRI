@@ -9,6 +9,11 @@ import Instituciones.Despacho;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ * @author David Lozano Campillo
+ * @version 1.0.0
+ */
+
 @XmlRootElement
 public class Director extends PersonalOtri {
     public Director(String nombre, String apellidos, String email, Sexo sexo, int edad, Dni dni, String contrasena, Despacho despacho) {

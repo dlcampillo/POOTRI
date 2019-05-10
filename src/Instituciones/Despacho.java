@@ -6,6 +6,11 @@ import com.sun.xml.internal.txw2.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 
+/**
+ * @author David Lozano Campillo
+ * @version 1.0.0
+ */
+
 @XmlRootElement
 public class Despacho {
     private int planta;

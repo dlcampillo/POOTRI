@@ -5,15 +5,20 @@ import Enums.TipoContrato;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ * @author David Lozano Campillo
+ * @version 1.0.0
+ */
+
 @XmlRootElement
 public class CodigoContrato {
     private TipoContrato tipo;
-    private int año;
+    private int anyo;
     private int contador;
 
-    public CodigoContrato(TipoContrato tipo, int año, int contador) {
+    public CodigoContrato(TipoContrato tipo, int ayoo, int contador) {
         this.tipo = tipo;
-        this.año = año;
+        this.anyo = anyo;
         this.contador = contador;
     }
 
@@ -27,8 +32,8 @@ public class CodigoContrato {
     }
 
     @XmlElement
-    public int getAño() {
-        return año;
+    public int getAnyo() {
+        return anyo;
     }
 
     @XmlElement
@@ -40,8 +45,8 @@ public class CodigoContrato {
         this.tipo = tipo;
     }
 
-    public void setAño(int año) {
-        this.año = año;
+    public void setAnyo(int anyo) {
+        this.anyo = anyo;
     }
 
     public void setContador(int contador) {
@@ -52,6 +57,6 @@ public class CodigoContrato {
     public String toString() {
         String[] tipos = {"INV", "ASE", "APT", "SER", "FOR"};
         String tipoStr = tipos[tipo.ordinal()];
-        return tipoStr + "-" + año + "-" + contador;
+        return tipoStr + "-" + anyo + "-" + contador;
     }
 }

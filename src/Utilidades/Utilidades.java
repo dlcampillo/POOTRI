@@ -3,6 +3,11 @@ package Utilidades;
 import Identificadores.Cif;
 import Identificadores.Dni;
 
+/**
+ * @author David Lozano Campillo
+ * @version 1.0.0
+ */
+
 public class Utilidades {
     public static int sumaDigitos(String numero) {
         int contador = 0;
